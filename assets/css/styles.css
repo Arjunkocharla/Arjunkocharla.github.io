@@ -5,7 +5,7 @@
   --header-height: 3rem;
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 250;
+  --hue-color: 230;
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -277,7 +277,7 @@ img {
 
 .home__social-icon {
   font-size: 1.25rem;
-  color: var(--first-color);
+  color: black;
 }
 
 .home__social-icon:hover {
@@ -290,7 +290,10 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  
+  width: 100%; /* This will make the image fit the width of its container */
+  height: auto; /* This will maintain the aspect ratio */
+  display: block; /* This will remove any default inline spacing */
 }
 
 .home__data {
@@ -317,7 +320,7 @@ img {
 }
 
 .home__scroll-button {
-  color: var(--first-color);
+  color: white;
   transition: .3s;
 }
 
@@ -327,13 +330,15 @@ img {
 
 .home__scroll-mouse {
   font-size: 2rem;
+  color: white;
 }
 
 .home__scroll-name {
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  color: white;
   font-weight: var(--font-medium);
   margin-right: var(--mb-0-25);
+  
 }
 
 .home__scroll-arrow {
@@ -358,24 +363,29 @@ img {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
   transition: .3s;
+  color: white;
 }
 
 .button--white {
   background-color: #FFF;
-  color: var(--first-color);
+  color: white;
 }
 
 .button--white:hover {
-  background-color: #FFF;
+  background-color: var(--first-color-alt);
+  color: black;
 }
 
 .button--flex {
   display: inline-flex;
   align-items: center;
+  background-color: black;
+  
 }
 
 .button--small {
   padding: .75rem 1rem;
+  
 }
 
 .button--link {
@@ -395,6 +405,8 @@ img {
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
+  width: 50%; /* Adjust this value as needed */
+  height: 400px; /* Keeps the aspect ratio */
 }
 
 .about__description {
@@ -447,10 +459,12 @@ img {
 
 .skills__icon {
   margin-right: var(--mb-0-75);
+  color: black;
 }
 
 .skills__title {
   font-size: var(--h3-font-size);
+  
 }
 
 .skills__subtitle {
@@ -461,6 +475,7 @@ img {
 .skills__arrow {
   margin-left: auto;
   transition: .4s;
+  color: black;
 }
 
 .skills__list {
@@ -482,15 +497,16 @@ img {
 .skills__bar, .skills__percentage {
   height: 5px;
   border-radius: .25rem;
+  
 }
 
 .skills__bar {
-  background-color: var(--first-color-lighter);
+  background-color: beige;
 }
 
 .skills__percentage {
   display: block;
-  background-color: var(--first-color);
+  background-color: black;
 }
 
 .skills__html {
@@ -556,12 +572,17 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
+  color: white;
+
 }
 
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  color: white;
+
+  
 }
 
 .qualification__button:hover {
@@ -577,6 +598,11 @@ img {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
+  color: black;
+  align-items: flex-start;
+  align-content: flex-start;
+ 
+ 
 }
 
 .qualification__title {
@@ -601,6 +627,8 @@ img {
   height: 13px;
   background-color: var(--first-color);
   border-radius: 50%;
+  align-self: start;
+  align-items: flex-start;
 }
 
 .qualification__line {
@@ -609,6 +637,7 @@ img {
   height: 100%;
   background-color: var(--first-color);
   transform: translate(6px, -7px);
+  align-content: flex-end;
 }
 
 .qualification [data-content] {
@@ -620,7 +649,7 @@ img {
 }
 
 .qualification__button.qualification__active {
-  color: var(--first-color);
+  color: white;
 }
 
 /*==================== SERVICES ====================*/
@@ -646,7 +675,7 @@ img {
 .services__icon {
   display: block;
   font-size: 1.5rem;
-  color: var(--first-color);
+  color: black;
   margin-bottom: var(--mb-1);
 }
 
@@ -659,6 +688,7 @@ img {
 .services__button {
   cursor: pointer;
   font-size: var(--small-font-size);
+  color: black;
 }
 
 .services__button:hover .button__icon {
@@ -736,6 +766,7 @@ img {
   width: 265px;
   border-radius: .5rem;
   justify-self: center;
+  height: 200px;
 }
 
 .portfolio__title {
@@ -758,7 +789,7 @@ img {
 
 .swiper-portfolio-icon {
   font-size: 2rem;
-  color: var(--first-color);
+  color: black;
 }
 
 .swiper-button-prev {
@@ -774,7 +805,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--first-color);
+  background-color: black;
 }
 
 .swiper-button-prev,
@@ -786,16 +817,20 @@ img {
 /*==================== PROJECT IN MIND ====================*/
 .project {
   text-align: center;
+  height: 70%;
+ 
+  
 }
 
 .project__bg {
-  background-color: var(--first-color-second);
+  background-color: black;
   padding-top: 3rem;
 }
 
 .project__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-75);
+  
 }
 
 .project__description {
@@ -809,6 +844,7 @@ img {
 .project__img {
   width: 232px;
   justify-self: center;
+  
 }
 
 /*==================== TESTIMONIAL ====================*/
@@ -862,7 +898,7 @@ img {
 
 .contact__icon {
   font-size: 2rem;
-  color: var(--first-color);
+  color: black;
   margin-right: var(--mb-0-75);
 }
 
@@ -901,14 +937,16 @@ img {
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
+  
 }
 
 .footer__container {
   row-gap: 3.5rem;
+ 
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background-color: black;
   padding: 2rem 0 3rem;
 }
 
@@ -956,7 +994,7 @@ img {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
+  background-color: black;
   opacity: .8;
   padding: 0 .3rem;
   border-radius: .4rem;
@@ -1178,7 +1216,7 @@ img {
     background: none;
   }
   .project__container {
-    background-color: var(--first-color-second);
+    background-color: black;
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     grid-template-columns: 1fr max-content;
@@ -1186,6 +1224,8 @@ img {
   }
   .project__data {
     padding-top: .8rem;
+    
+    
   }
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1248,4 +1288,65 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .qualification__sections {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .qualification__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right for the left column */
+    padding-right: 1rem; /* Spacing between the timeline and the content */
+  }
+  
+  .qualification__content--work {
+    align-items: flex-start; /* Align items to the left for the right column */
+    padding-left: 1rem; /* Spacing between the timeline and the content */
+    padding-right: 0;
+  }
+  
+  .qualification__data {
+    display: flex;
+  }
+  
+  /* The timeline itself */
+  .qualification__timeline {
+    position: relative;
+    padding: 0;
+    margin: 0 2rem; /* Adjust as necessary to align dates */
+  }
+  
+  .qualification__timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background-color: #ddd; /* Your line color */
+  }
+  
+  .qualification__date {
+    position: relative;
+    z-index: 2; /* To stay above the timeline */
+  }
+  
+  /* This is for the round indicators on the timeline */
+  .qualification__rounder {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 3px solid #333; /* Your rounder color */
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+
+  
 }
