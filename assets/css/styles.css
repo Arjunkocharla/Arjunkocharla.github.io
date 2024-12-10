@@ -12,9 +12,9 @@
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --title-color: hsl(var(--hue-color), 12%, 15%);
+  --text-color: hsl(var(--hue-color), 12%, 45%);
+  --text-color-light: hsl(var(--hue-color), 12%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #FFF;
@@ -83,10 +83,12 @@ body.dark-theme {
   color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .change-theme:hover {
   color: var(--first-color);
+  transform: rotate(15deg);
 }
 
 /*==================== BASE ====================*/
@@ -227,7 +229,8 @@ img {
 }
 
 .nav__icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 .nav__close {
@@ -277,11 +280,13 @@ img {
 
 .home__social-icon {
   font-size: 1.25rem;
-  color: black;
+  color: var(--title-color);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .home__social-icon:hover {
-  color: var(--first-color-alt);
+  color: var(--first-color);
+  transform: translateY(-4px);
 }
 
 .home__blob {
@@ -322,10 +327,11 @@ img {
 .home__scroll-button {
   color: white;
   transition: .3s;
+  border-radius: 0.5rem;
 }
 
 .home__scroll-button:hover {
-  transform: translateY(0.25rem);
+  transform: translateY(.25rem);
 }
 
 .home__scroll-mouse {
@@ -335,10 +341,9 @@ img {
 
 .home__scroll-name {
   font-size: var(--small-font-size);
-  color: white;
+  color: #FFF;
   font-weight: var(--font-medium);
   margin-right: var(--mb-0-25);
-  
 }
 
 .home__scroll-arrow {
@@ -379,7 +384,7 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
-  background-color: black;
+  background-color: var(--first-color);
   
 }
 
@@ -458,8 +463,14 @@ img {
 }
 
 .skills__icon {
+  font-size: 1.8rem;
   margin-right: var(--mb-0-75);
-  color: black;
+  color: var(--first-color);
+  transition: transform 0.3s ease;
+}
+
+.skills__icon:hover {
+  transform: scale(1.1);
 }
 
 .skills__title {
@@ -475,7 +486,7 @@ img {
 .skills__arrow {
   margin-left: auto;
   transition: .4s;
-  color: black;
+  color: var(--first-color);
 }
 
 .skills__list {
@@ -501,12 +512,12 @@ img {
 }
 
 .skills__bar {
-  background-color: beige;
+  background-color: var(--text-color-light);
 }
 
 .skills__percentage {
   display: block;
-  background-color: black;
+  background-color: var(--first-color);
 }
 
 .skills__html {
@@ -581,8 +592,9 @@ img {
   font-weight: var(--font-medium);
   cursor: pointer;
   color: white;
-
-  
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-width: 120px;
 }
 
 .qualification__button:hover {
@@ -598,7 +610,7 @@ img {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
-  color: black;
+  color: var(--text-color);
   align-items: flex-start;
   align-content: flex-start;
  
@@ -673,22 +685,27 @@ img {
 }
 
 .services__icon {
-  display: block;
   font-size: 1.5rem;
-  color: black;
+  color: var(--first-color);
   margin-bottom: var(--mb-1);
+  transition: transform 0.3s ease;
+}
+
+.services__icon:hover {
+  transform: translateY(-2px);
 }
 
 .services__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
+  color: var(--title-color);
 }
 
 .services__button {
   cursor: pointer;
   font-size: var(--small-font-size);
-  color: black;
+  color: var(--title-color);
 }
 
 .services__button:hover .button__icon {
@@ -789,7 +806,7 @@ img {
 
 .swiper-portfolio-icon {
   font-size: 2rem;
-  color: black;
+  color: var(--first-color);
 }
 
 .swiper-button-prev {
@@ -805,7 +822,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: black;
+  background-color: var(--first-color);
 }
 
 .swiper-button-prev,
@@ -817,20 +834,19 @@ img {
 /*==================== PROJECT IN MIND ====================*/
 .project {
   text-align: center;
-  height: 70%;
- 
-  
+  height: 80%;
 }
 
 .project__bg {
-  background-color: black;
+  background-color: var(--first-color);
   padding-top: 3rem;
+  padding-bottom: 6rem;
+  height: 80%;
 }
 
 .project__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-75);
-  
 }
 
 .project__description {
@@ -844,7 +860,6 @@ img {
 .project__img {
   width: 232px;
   justify-self: center;
-  
 }
 
 /*==================== TESTIMONIAL ====================*/
@@ -897,9 +912,14 @@ img {
 }
 
 .contact__icon {
-  font-size: 2rem;
-  color: black;
+  font-size: 1.5rem;
+  color: var(--first-color);
   margin-right: var(--mb-0-75);
+  transition: transform 0.3s ease;
+}
+
+.contact__icon:hover {
+  transform: scale(1.1);
 }
 
 .contact__title {
@@ -946,7 +966,7 @@ img {
 }
 
 .footer__bg {
-  background-color: black;
+  background-color: var(--first-color-second);
   padding: 2rem 0 3rem;
 }
 
@@ -994,7 +1014,7 @@ img {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: black;
+  background-color: var(--first-color);
   opacity: .8;
   padding: 0 .3rem;
   border-radius: .4rem;
@@ -1009,6 +1029,11 @@ img {
 .scrollup__icon {
   font-size: 1.5rem;
   color: #FFF;
+  transition: transform 0.3s ease;
+}
+
+.scrollup:hover .scrollup__icon {
+  transform: translateY(-2px);
 }
 
 /* Show scroll */
@@ -1216,7 +1241,7 @@ img {
     background: none;
   }
   .project__container {
-    background-color: black;
+    background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     grid-template-columns: 1fr max-content;
